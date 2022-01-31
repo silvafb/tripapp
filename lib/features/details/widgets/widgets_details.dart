@@ -1,0 +1,9 @@
+export './carrier_form_details_widget.dart';
+export './form_details_widget.dart';
+export './occupation_form_details_widget.dart';
+export './service_form_details_widget.dart';
+export './unit_form_details_widget.dart';
+export './user_form_details_widget.dart';
+export './value_form_details_widget.dart';
+export './vehicle_form_details_widget.dart';
+export './volume_form_details_widget.dart';
