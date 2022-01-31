@@ -20,13 +20,13 @@ abstract class LoginController extends ChangeNotifier {
 class LoginControllerImp extends ChangeNotifier implements LoginController{
   AppState _state = AppState.empty();
   static final _formKey = GlobalKey<FormState>();
-  LoginRepositoryImp loginRepository;
+  LoginRepository loginRepository;
   String _email = "";
   String _password = "";
   TextEditingController loginTextController = TextEditingController();
   final localStorage = LocalStorageImp();
 
-  LoginControllerImp({required this.loginRepository});
+  LoginControllerImp(LoginRepository this.loginRepository);
 
   Future<void> loadingUserStorage() async {
     final Map<String, dynamic> result = await localStorage.getStorageMap('lastlogin');
