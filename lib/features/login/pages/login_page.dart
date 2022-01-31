@@ -24,11 +24,7 @@ class LoginAuthenticationPage extends StatefulWidget {
 
 class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
 
-  final loginController = LoginControllerImp(
-    loginRepository: LoginRepositoryImp(
-      httpClient: HttpClientImp(),
-    )
-  );
+  final loginController = LoginControllerImp(LoginRepositoryImp(HttpClientImp()));
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final localStorage = LocalStorageImp();

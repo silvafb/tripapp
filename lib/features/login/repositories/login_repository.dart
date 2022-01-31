@@ -7,7 +7,7 @@ abstract class LoginRepository {
 class LoginRepositoryImp implements LoginRepository {
 
   HttpClient httpClient;
-  LoginRepositoryImp({ required this.httpClient});
+  LoginRepositoryImp(HttpClient this.httpClient);
 
   @override
   Future<Map<String, dynamic>> authentication({ required String login, required String password }) async {
