@@ -26,9 +26,7 @@ class LoginControllerImp extends ChangeNotifier implements LoginController{
   TextEditingController loginTextController = TextEditingController();
   final localStorage = LocalStorageImp();
 
-  LoginControllerImp(LoginRepository loginRepository){
-    _loginRepository = loginRepository;
-  }
+  LoginControllerImp(LoginRepository this._loginRepository);
 
   Future<void> loadingUserStorage() async {
     final Map<String, dynamic> result = await localStorage.getStorageMap('lastlogin');
